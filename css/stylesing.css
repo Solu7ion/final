@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #222;
+  
+}
+
+
+body {
+  
+  background-color: #e2e2e5;
+  font-family: "Montserrat";
+  display: flex;
+}
+.container{
+ 
+  margin: 0 auto;
+}
+.cont-inner {
+  display: flex;
+}
+.up{
+  margin-top: 30px;
+  background-color: #fff;
+  margin-left: 100px;
+  width: 400px;
+  height: 300px;
+
+  padding: 50px 15px 0px 50px ;
+  font-size: 35px;
+}
+.up a {
+  margin: 35%;
+}
+.down {
+  background: #474A59;
+  width: 600px;
+  height: 600px;
+  color: #fff;
+  justify-content: center;
+  padding-left: 150px;
+  padding-top: 100px;
+  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+  position: relative;
+}
+input {
+  background: transparent;
+  border: 0;
+  color: #f2f2f2;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  outline: none !important;
+  width: 100%;
+}
+label {
+  color:  #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+   
+}
+
+
+#submit {
+  color: #707075;
+  margin-top: 40px;
+  transition: color 200ms;
+ 
+}
+#submit:focus {
+  color: #f2f2f2;
+}
+#submit:active {
+  color: #d0d0d2;
+}
+
+
+
+
+
+.section {
+  z-index: 10;
+  
+  display: flex;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.menu-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+}
+
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px; 
+  left: 50%; margin-left: -10px;
+  width: 20px; 
+  height: 2px;
+  background-color: #222;
+}
+.menu-btn span{
+height: 0;
+}
+.menu-btn span::before, 
+.menu-btn span::after{
+  content: '';
+  display: block;
+  transition: 0.4s;
+}
+.menu-btn span::before{
+  transform: translateY(-5px);
+transform: rotate(45deg);
+}
+
+.menu-btn span::after {
+  transform: translateY(5px);
+transform: rotate(-45deg);
+}

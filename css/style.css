@@ -1,0 +1,624 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+canvas {
+  margin: 0;
+  padding: 0;
+}
+.mask {
+    align-items: center;
+    background: #242424;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+  }
+  
+  .filter {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .dots {
+    filter: url(#gooeyness);
+    padding: 30px;
+  }
+  
+  .dot {
+    background: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 20px;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .dot:first-child {
+    animation: FirstDot 3s infinite;
+  }
+  
+  .dot:nth-child(2) {
+    animation: SecondDot 3s infinite;
+  }
+  
+  .dot:nth-child(3) {
+    animation: ThirdDot 3s infinite;
+  }
+  
+  .dot:nth-child(4) {
+    animation: FourthDot 3s infinite;
+  }
+  
+  .dot:nth-child(5) {
+    animation: FifthDot 3s infinite;
+  }
+  
+  @keyframes FirstDot {
+    0% {
+      transform: scale(1) translateX(0);
+    }
+    25% {
+      transform: scale(2.5) translateX(0);
+    }
+    50% {
+      transform: scale(1) translateX(0);
+    }
+    83% {
+      transform: scale(1) translateX(240px);
+    }
+    100% {
+      transform: scale(1) translateX(0);
+    }
+  }
+  
+  @keyframes SecondDot {
+    0% {
+      transform: translateX(0px);
+    }
+    27% {
+      transform: translateX(-40px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    81% {
+      transform: translateX(180px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes ThirdDot {
+    0% {
+      transform: translateX(0px);
+    }
+    29% {
+      transform: translateX(-100px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    79% {
+      transform: translateX(120px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes FourthDot {
+    0% {
+      transform: translateX(0px);
+    }
+    31% {
+      transform: translateX(-160px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    77% {
+      transform: translateX(60px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes FifthDot {
+    0% {
+      transform: scale(1) translateX(0);
+    }
+    33% {
+      transform: scale(1) translateX(-220px);
+    }
+    50% {
+      transform: scale(1) translateX(0);
+    }
+    75% {
+      transform: scale(2.5) translateX(0);
+    }
+    100% {
+      transform: scale(1) translateX(0);
+    }
+  }
+
+  
+
+
+
+
+
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    font-family: "Montserrat";
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+
+/*тень для header*/
+.header {
+    width: 100%;
+    height: 90  px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    font-family: "Montserrat";
+    background-color: #eee;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .9);
+}
+.aud {
+    margin-top: 10px;
+    margin-left: 10px;
+    position: fixed;
+    z-index: 11;
+}
+
+
+
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+
+/*логотип*/
+
+.logo{
+    margin-top: 10px;
+    font-size: 50px;
+    font-family: "Montserrat ";
+
+ }
+
+.logo a {
+    text-decoration: none;
+    font-family: "Montserrat";
+    color: black;
+    transition: .09s ease-in-out    ;
+}
+
+.logo a:hover {
+    color: blue;
+}
+ 
+ 
+ 
+ /*меню верхний центр*/
+
+.nav {
+    padding-top: 30px;
+}
+.nav a {
+    margin:20px ;
+}
+.nav a:hover {
+    color: coral;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+    background-color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+.nav-link:hover::after{
+    display: block;
+}
+
+
+/*вход справа*/
+.reg a {
+    text-decoration: none;
+    color: #000;
+    transition: .09s ease-in-out;
+    padding: 0 10px;
+}
+.reg {
+    padding-top: 25px;
+}
+
+.reg__link_up {
+    border: 2px solid black;
+    border-radius: 100px;
+    
+}
+.reg a:hover {
+    
+    color: coral;
+    border-color: coral;
+
+}
+
+
+
+
+/*фон верхний*/
+.slider{
+    max-width: 100%;
+    height: 743px;
+    margin: auto;
+    
+    margin-bottom: 15px;
+}
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 743px;
+    border: none !important;
+    box-shadow: none !important;
+}
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Заголовок слайда */
+
+.slideText1 {
+    
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 55%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    
+}
+
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .6
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .6
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+
+/*кнопка Sing up */
+
+.intro__right_in_btn{
+    font-family: "Montserrat";
+    font-size: 25px;
+    color: #000;
+    text-align: center;
+    
+    
+    border: 2px solid white;
+    border-radius: 100px;
+    width: 200px;
+    height: 40px;
+
+    margin-left: 30%;
+    margin-top: 30px;
+    padding-top: 5px;
+
+    background-color: white;
+}
+
+
+.intro__right_in_btn a{
+    text-decoration: none;
+    color: black;
+}
+.btn a:hover {
+    color: coral;
+    
+}
+
+
+
+
+
+
+/*надписи выбор редакции*/
+#the__best_inner {
+    
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#the__best_inner2 {
+    
+    text-align: center;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+
+/*вид кнопки выбор редакции*/
+#the-best {
+  width: 300px;
+  height: 64px;
+  background-color: #222;
+  color: white;
+  border-radius: 100px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+
+#the-best:hover {
+  background-color: red;
+}
+
+
+
+
+.photos{
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+.ph__all {
+    display: flex;
+    justify-content: center;  
+}
+.ph__all img{
+    transition: 0.4s;
+}
+.ph__all img:hover {
+    transform: scale(1.4);
+}
+.ph__up_ph {
+    padding: 5px;
+}
+.ph__down {
+    display: flex;
+    justify-content: center;
+}
+.ph__down_ph {
+    padding: 5px;
+    
+}
+
+
+
+/*footer*/
+.up__footer{
+    margin-top: 25px;
+    width: 100%;
+    height: 320px;
+    background-color: #45457c;
+    
+}
+.up__footer__inner{
+    color: #eee;
+    
+    align-items: center;
+    padding: 64px;
+    
+}
+#up__footer__in1{
+    text-align: center;
+    font-size: 36px;
+}
+#up__footer__in2 {
+    text-align: center;
+    margin-top: 30px;
+    line-height: 25px;
+}
+
+
+/*button up footer*/
+#up__footer__in_btn {
+    border: 2px solid #eee;
+    border-radius: 100px;
+    width: 250px;
+    height: 50px;
+    background-color: #eee;
+
+    margin-top: 40px;
+     
+    text-align: center;
+    padding-top: 10px;
+    font-size: 30px;
+
+}
+/*animation hover */
+
+
+
+
+/* контакты самый конец*/
+.mtop{
+    margin-top: 35px;
+}
+.footer__line1{
+    display: flex;
+    justify-content: center;
+  
+}
+.ph1 {
+    margin: 15px;
+}
+
+
+.footer__line1 h3 {
+    padding: 15px;
+}
+
+
+
+
+.line {
+  width: 100%;
+  height: 300px;
+ 
+  padding-top: 100px;
+  display: block;
+  
+  
+}
+.line-inner {
+  font-size: 64px;
+  position: relative;
+
+  
+  
+  animation: line-line 2.5s infinite linear;
+}
+
+
+
+
+.draw {
+  max-width: 100%;
+  height: 1000px;
+  
+  
+}
+#up-cnv {
+  color: white;
+  position: relative;
+  top: 500px;
+  margin: 50px;
+  font-size: 150px;
+  z-index: 5;
+  text-align: center;
+}
+#up-cnv:hover {
+  z-index: -1;
+}
+
+#myCanvas {
+  margin: 0;
+  position: absolute;
+  margin-top: -350px;
+           
+  
+}
+
+
+
+
+
